@@ -14,6 +14,13 @@ public class Estacionamento {
     private Tempo horaEntrada;
     private Tempo horaSaida;
 
+    public void Estacionamento() {
+        this.placa = null;
+        this.modelo = null;
+        this.horaEntrada = new Tempo();
+        this.horaSaida = new Tempo();
+    }
+
     /**
      * @return the placa
      */
