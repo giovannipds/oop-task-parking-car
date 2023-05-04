@@ -13,13 +13,13 @@ public class Tempo {
     private int minutos;
     private int segundos;
     
-    public Tempo() {
+    public void Tempo() {
         this.horas = 0;
         this.minutos = 0;
         this.segundos = 0;
     }
     
-    public Tempo(int horas, int minutos, int segundos) {
+    public void Tempo(int horas, int minutos, int segundos) {
         this.horas = horas;
         this.minutos = minutos;
         this.segundos = segundos;
