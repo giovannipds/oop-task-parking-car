@@ -21,6 +21,10 @@ public class Estacionamento {
         this.horaSaida = new Tempo();
     }
 
+    public void imprimir() {
+        System.out.println("Carro estacionado, modelo: '" + this.modelo + "', placa: '" + this.placa + "'");
+    }
+
     /**
      * @return the placa
      */
