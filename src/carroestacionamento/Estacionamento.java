@@ -13,6 +13,7 @@ public class Estacionamento {
     private String modelo;
     private Tempo horaEntrada;
     private Tempo horaSaida;
+    static int custo = 2;
 
     public void Estacionamento() {
         this.placa = null;
@@ -23,6 +24,13 @@ public class Estacionamento {
 
     public void imprimir() {
         System.out.println("Carro estacionado, modelo: '" + this.modelo + "', placa: '" + this.placa + "'");
+    }
+
+    public void calcular() {
+        int valor = 0;
+        int horas = this.horaSaida.getHoras() - this.horaEntrada.getHoras();
+        valor = horas * Estacionamento.custo;
+        System.out.println("Valor a ser pago: R$ " + valor);
     }
 
     /**
