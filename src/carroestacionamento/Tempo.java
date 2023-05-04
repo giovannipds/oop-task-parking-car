@@ -14,15 +14,15 @@ public class Tempo {
     private int segundos;
     
     public void Tempo() {
-        this.horas = 0;
-        this.minutos = 0;
-        this.segundos = 0;
+        this.setHoras(0);
+        this.setMinutos(0);
+        this.setSegundos(0);
     }
     
     public void Tempo(int horas, int minutos, int segundos) {
-        this.horas = horas;
-        this.minutos = minutos;
-        this.segundos = segundos;
+        this.setHoras(horas);
+        this.setMinutos(minutos);
+        this.setSegundos(segundos);
     }
 
     /**
