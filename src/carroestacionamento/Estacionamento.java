@@ -15,11 +15,14 @@ public class Estacionamento {
     private Tempo horaSaida;
     static int custo = 2;
 
-    public void Estacionamento() {
+    public Estacionamento() {
         this.placa = null;
         this.modelo = null;
         this.horaEntrada = new Tempo();
         this.horaSaida = new Tempo();
+        // System.out.println("Estacionamento construído");
+        // System.out.println("Placa: " + this.placa + " - modelo: " + this.modelo);
+        // System.out.println("Hora entrada:" + this.horaEntrada.getHoraFormatada() + " - hora saida: " + this.horaSaida.getHoraFormatada());
     }
 
     public void imprimir() {
@@ -28,9 +31,11 @@ public class Estacionamento {
 
     public void calcular() {
         int valor = 0;
-        int horas = this.horaSaida.getHoras() - this.horaEntrada.getHoras();
+        var he = this.getHoraEntrada();
+        int horas = this.getHoraSaida().getHoras() - this.getHoraEntrada().getHoras();
         valor = horas * Estacionamento.custo;
         System.out.println("Valor a ser pago: R$ " + valor);
+        // TODO: considerar os minutos e arredondar a hora
     }
 
     /**
@@ -65,7 +70,7 @@ public class Estacionamento {
      * @return the horaEntrada
      */
     public Tempo getHoraEntrada() {
-        return horaEntrada;
+        return this.horaEntrada;
     }
 
     /**
@@ -79,7 +84,7 @@ public class Estacionamento {
      * @return the horaSaida
      */
     public Tempo getHoraSaida() {
-        return horaSaida;
+        return this.horaSaida;
     }
 
     /**

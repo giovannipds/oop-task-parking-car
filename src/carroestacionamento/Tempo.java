@@ -13,23 +13,30 @@ public class Tempo {
     private int minutos;
     private int segundos;
     
-    public void Tempo() {
-        this.setHoras(0);
-        this.setMinutos(0);
-        this.setSegundos(0);
+    // TODO: validar hora entre 0 e 12 e minuto e segundo entre 0 e 60
+    public Tempo() {
+        this.horas = 0;
+        this.minutos = 0;
+        this.segundos = 0;
     }
     
-    public void Tempo(int horas, int minutos, int segundos) {
-        this.setHoras(horas);
-        this.setMinutos(minutos);
-        this.setSegundos(segundos);
+    public Tempo(int horas, int minutos, int segundos) {
+        this.horas = horas;
+        this.minutos = minutos;
+        this.segundos = segundos;
+    }
+    
+    public String getHoraFormatada() {
+        String hora = this.horas < 10 ? "0" + this.horas : Integer.toString(this.horas);
+        String minuto = this.minutos < 10 ? "0" + this.minutos : Integer.toString(this.minutos);
+        return hora + ":" + minuto;
     }
 
     /**
      * @return the horas
      */
     public int getHoras() {
-        return horas;
+        return this.horas;
     }
 
     /**
@@ -43,7 +50,7 @@ public class Tempo {
      * @return the minutos
      */
     public int getMinutos() {
-        return minutos;
+        return this.minutos;
     }
 
     /**
@@ -57,7 +64,7 @@ public class Tempo {
      * @return the segundos
      */
     public int getSegundos() {
-        return segundos;
+        return this.segundos;
     }
 
     /**
